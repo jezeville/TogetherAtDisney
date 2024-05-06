@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ 'css/register.css' }}">
+{% endblock %}
+
+{% block body %}
+    <body class="background-gradient">
+        
+        <img class="register__img" src="{{ 'img/castle_with_stars.svg' }}" alt="Logo disney en png">
+        <div class="box">
+            {{ form_errors(registrationForm) }}
+
+            {{ form_start(registrationForm , {
+                attr : {
+                    class : 'form'
+                }
+            }) }}
+                {{ form_row(registrationForm.name , {
+                    label : 'Nom',
+                    attr: {
+                        class: 'form__input'
+                    }
+                }) }}
+                {{ form_row(registrationForm.firstname, {
+                    label : 'Prénom',
+                    attr: {
+                        class: 'form__input'
+                    }
+                }) }}
+                {{ form_row(registrationForm.email, {
+                    label : 'Email',
+                    attr: {
+                        class: 'form__input'
+                    }
+                }) }}
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Mot de passe',
+                    attr: {
+                        class: 'form__input'
+                    }
+                }) }}
+                {# {{ form_row(registrationForm.agreeTerms) }} #}
+                <p class="alreadyAccount">J’ai déjà un compte. <a href="{{ path('app_login') }}">Me connecter</a></p>
+                <div class="btn__box">
+                    <button type="submit" class="btn btn__register">Inscription</button>
+                </div>
+            {{ form_end(registrationForm) }}
+        </div>
+    </body>
+{% endblock %}

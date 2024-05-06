@@ -1,0 +1,34 @@
+
+
+.menu{
+    background-color: $darkBlue;
+    position : fixed;
+    display: flex;
+    justify-content: space-around;
+    bottom: 0;
+    width: 100%;
+    .box{
+        width: 35px;
+    }
+    .img__home{
+        width: 30px;
+        height: 30px;
+    }
+    .img__message{
+        width: 35px;
+        height: 42px;
+    }
+    .img__add{
+        width: 30px;
+        height: 30px;
+    }
+
+    .img__disney{
+        width: 94px;
+        height: 42px;
+    }
+    .img__profil{
+        width: 45px;
+        height: 45px;
+    }
+}

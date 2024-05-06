@@ -1,0 +1,60 @@
+@import 'reset';
+@import 'default';
+
+
+.register__img{
+    width: 90%;
+    margin: auto;
+}
+
+.box{
+    background-color: white;
+    border-radius : 15px;
+    width: 80%;
+    margin : 0px auto 25px auto;
+}
+
+.form{
+    width: 80%;
+    margin: auto;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    padding : 24px 0px;
+    div{
+        margin : 24px 0px;
+    }
+    &__input{
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        width: 100%;
+        padding : 5px;
+        background-color: $gray;
+    }
+    
+}
+.alreadyAccount {
+    text-align: center;
+    font-size : 13px;
+    a{
+        color : $blue;
+        text-decoration: none;
+    }
+    &:visited{
+        color : $blue;
+        text-decoration: none;
+    }
+}
+
+.btn__box{
+    text-align: center;
+}
+
+.btn__register{
+    margin : auto;
+    border : none;
+    border-radius: 25px;
+    background-color: $darkBlue;
+    color : white;
+    padding : 10px 30px;
+}

@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ 'css/profil.css' }}">
+{% endblock %}
+
+{% block body %}
+<div class="parameter">
+    <img class="parameter__img" src="{{ 'img/parameter.svg' }}">
+</div>
+<div class="profil">
+    <img class="profil__img" src="{{ pp }}">
+    <h1 class="profil__name">{{ fullname }}</h1>
+    <div class="profil__number">
+        <div class="profil__number__flex">
+            <p>Followers</p>
+            <p class="weight">400</p>
+        </div> 
+        <div class="profil__number__flex">
+            <p>Following</p>
+            <p class="weight">400</p>
+        </div> 
+        <div class="profil__number__flex">
+            <p>Photo</p>
+            <p class="weight">1</p>
+        </div> 
+    </div>
+    <div class="profil__biography">
+        <p class="profil__biography__text">{{ biography }}</p>
+        <a href="{{ path('app_edit')}}">
+            <img class="profil__biography__btn" src="{{ 'img/crayon.svg' }}">
+        </a>
+    </div>
+</div>
+<div class="separate"></div>
+
+<div class="picture">
+    {% for imageUrl in imageUrls %}
+        <div class="picture__box">
+            <img src="{{ imageUrl }}">
+        </div>
+    {% endfor %}
+</div>
+
+<div class="menu">
+    <div class="menu__home box">
+        <a><img class="img__home" src="{{ 'img/house.svg' }}"></a>
+    </div>
+    <div class="menu__message box">
+        <a><img class="img__message" src="{{ 'img/conversation.svg' }}"></a>
+    </div>
+    <div class="menu__add">
+        <a href="{{ path('app_add') }}"><img class="img__add" src="{{ 'img/add.svg' }}"></a>
+    </div>
+    <div class="menu__disney box">
+        <a><img class="img__disney" src="{{ 'img/castle_without_stars.svg' }}"></a>
+    </div>
+    <div class="menu__profil box">
+        <a><img class="img__profil" src="{{ 'img/mickey.svg' }}"></a>
+    </div>
+</div>
+
+{% endblock %}

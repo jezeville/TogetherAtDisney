@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AddController!{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ 'css/register.css' }}">
+{% endblock %}
+{% block body %}
+    <body class="background-gradient">
+        
+        <img class="register__img" src="{{ '../img/castle_with_stars.svg' }}" alt="Logo disney en png">
+        <div class="box">
+            {{ form_errors(AddForm) }}
+
+            {{ form_start(AddForm , {
+                attr : {
+                    class : 'form'
+                }
+            }) }}
+                 {{ form_row(AddForm.publicId , {
+                    label : 'Photo',
+                    attr: {
+                        class: 'form__input'
+                    }
+                }) }}
+                <div class="btn__box">
+                    <button type="submit" class="btn btn__register">Ajouter</button>
+                </div>
+            {{ form_end(AddForm) }}
+        </div>
+    </body>
+{% endblock %}

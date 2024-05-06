@@ -1,0 +1,21 @@
+
+// Primary Color 
+
+$lightBlue : rgba(78, 235, 230,1);
+$darkBlue : rgba(6, 55, 70,1);
+$gray : rgba(245, 245, 245,1);
+$blue : rgba(0,0,255,1);
+
+
+.background-gradient{
+    background: $darkBlue;
+    background: linear-gradient(225deg, $darkBlue 45%, $lightBlue 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+// Font style
+

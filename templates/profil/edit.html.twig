@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ '../css/register.css'}}">
+{% endblock %}
+
+{% block body %}
+    <body class="background-gradient">
+        
+        <img class="register__img" src="{{ '../img/castle_with_stars.svg' }}" alt="Logo disney en png">
+        <div class="box">
+            {{ form_errors(BioSurForm) }}
+
+            {{ form_start(BioSurForm , {
+                attr : {
+                    class : 'form'
+                }
+            }) }}
+                {{ form_row(BioSurForm.surname , {
+                    label : 'Surnom',
+                    attr: {
+                        class: 'form__input'
+                    }
+                }) }}
+                {{ form_row(BioSurForm.biography, {
+                    label : 'Biographie',
+                    attr: {
+                        class: 'form__input'
+                    }
+                }) }}
+                 {{ form_row(BioSurForm.pp , {
+                    label : 'Photo de profil',
+                    attr: {
+                        class: 'form__input'
+                    }
+                }) }}
+                <div class="btn__box">
+                    <button type="submit" class="btn btn__register">Valider</button>
+                </div>
+            {{ form_end(BioSurForm) }}
+        </div>
+    </body>
+{% endblock %}
