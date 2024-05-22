@@ -48,7 +48,9 @@ class ProfilController extends AbstractController
 
         $photos = $user->getPhotos(); 
 
-        $imageList = [];
+        $imageUrls = [];
+        if ($photos) {
+            $imageList = [];
             foreach ($photos as $photo) {
                 $imageList[] = $photo->getPublicId();
             }
@@ -56,12 +58,15 @@ class ProfilController extends AbstractController
                 $imageUrl = $cloudinary->image($imageList[$i])->resize(Resize::fill(150, 150))->toUrl();
                 $imageUrls[] = $imageUrl;
             }
+}
+        
         return $this->render('profil/index.html.twig', [
             'fullname' => $fullname,
             'biography' => $biography,
             'pp' => $ppUrl,
             //Ajoutez la liste de toutes les images correspondantes à l'utilisateur
-            'imageUrls' => $imageUrls, 
+            'imageUrls' => $imageUrls,
+            'nbrImage' => $i, 
         ]);
     }
     #[Route('/profil/edit', name: 'app_edit')]

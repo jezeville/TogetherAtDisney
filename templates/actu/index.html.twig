@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}File d'actualité{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ 'css/actu.css' }}">
+{% endblock %}
+
+
+
+{% block body %}
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      {% for imageUrl in imageUrls %}
+        <div class="swiper-slide">
+          <img src="{{ imageUrl }}" alt="Photo" class="hidden"> 
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Inclure Swiper.js via CDN -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- Votre propre script JavaScript -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+      // Configuration de Swiper ici...
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      on: {
+        slideChange: function () {
+          // Afficher l'image lorsque le diapo change
+          var activeSlide = this.slides[this.activeIndex];
+          var img = activeSlide.querySelector('img');
+          img.classList.remove('hidden');
+        }
+      }
+    });
+  </script>
+  <div class="menu">
+    <div class="menu__left">
+        <div class="menu__left__home">
+            <a href="{{ path('app_actu') }}">
+                <img class="img__home" src="{{ 'img/house.svg' }}"></a>
+        </div>
+        <div class="menu__left__message">
+            <a>
+                <img class="img__message" src="{{ 'img/conversation.svg' }}"></a>
+        </div>
+    </div>
+    <div class="menu__center">
+        <div class="menu__center__rounded">
+            <a href="{{ path('app_add') }}">
+                <img class="img__add" src="{{ 'img/add.svg' }}">
+            </a>
+        </div>
+    </div>
+    <div class="menu__right">
+        <div class="menu__right__disney">
+            <a>
+                <img class="img__disney" src="{{ 'img/castle_without_stars.svg' }}">
+            </a>
+        </div>
+        <div class="menu__right__profil">
+            <a href="{{ path('app_profil') }}">
+                <img class="img__profil" src="{{ 'img/mickey.svg' }}">
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %} 
+
+

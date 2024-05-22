@@ -106,65 +106,6 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 45px;
 }
 
-.parameter {
-  display: flex;
-  justify-content: flex-end;
-}
-.parameter__img {
-  width: 12%;
-  margin-top: 25px;
-  margin-right: 15px;
-}
-
-.profil {
-  font-family: "Inter";
-  margin: auto;
-  text-align: center;
-  width: 80%;
-  margin-top: 15px;
-}
-.profil__img {
-  border-radius: 50%;
-  margin: auto;
-}
-.profil__name {
-  margin: 15px 0px;
-  font-size: 20px;
-  font-weight: 500;
-}
-.profil__number {
-  display: flex;
-  justify-content: space-around;
-}
-.profil__number__flex {
-  display: flex;
-  flex-direction: column;
-}
-.profil .weight {
-  font-weight: 600;
-}
-.profil__biography {
-  display: flex;
-  justify-content: space-between;
-  height: 110px;
-  margin: 25px 0px;
-}
-.profil__biography__btn {
-  width: 25px;
-}
-
-.separate {
-  height: 5px;
-  background: rgb(6, 55, 70);
-  background: linear-gradient(225deg, rgb(6, 55, 70) 45%, rgb(78, 235, 230) 100%);
-}
-
-.picture {
-  display: flex;
-  margin: 20px 0px 50px 0px;
-  flex-wrap: wrap;
-}
-.picture__box {
-  width: 30%;
-  margin: 5px 5px;
-}/*# sourceMappingURL=profil.css.map */
+.hidden {
+  display: none;
+}/*# sourceMappingURL=actu.css.map */

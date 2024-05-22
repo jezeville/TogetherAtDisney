@@ -24,7 +24,7 @@
         </div> 
         <div class="profil__number__flex">
             <p>Photo</p>
-            <p class="weight">1</p>
+            <p class="weight">{{ nbrImage }}</p>
         </div> 
     </div>
     <div class="profil__biography">
@@ -45,20 +45,34 @@
 </div>
 
 <div class="menu">
-    <div class="menu__home box">
-        <a><img class="img__home" src="{{ 'img/house.svg' }}"></a>
+    <div class="menu__left">
+        <div class="menu__left__home">
+            <a href="{{ path('app_actu') }}">
+                <img class="img__home" src="{{ 'img/house.svg' }}"></a>
+            </div>
+            <div class="menu__left__message">
+                <a>
+                <img class="img__message" src="{{ 'img/conversation.svg' }}"></a>
+        </div>
     </div>
-    <div class="menu__message box">
-        <a><img class="img__message" src="{{ 'img/conversation.svg' }}"></a>
+    <div class="menu__center">
+        <div class="menu__center__rounded">
+            <a href="{{ path('app_add') }}">
+                <img class="img__add" src="{{ 'img/add.svg' }}">
+            </a>
+        </div>
     </div>
-    <div class="menu__add">
-        <a href="{{ path('app_add') }}"><img class="img__add" src="{{ 'img/add.svg' }}"></a>
-    </div>
-    <div class="menu__disney box">
-        <a><img class="img__disney" src="{{ 'img/castle_without_stars.svg' }}"></a>
-    </div>
-    <div class="menu__profil box">
-        <a><img class="img__profil" src="{{ 'img/mickey.svg' }}"></a>
+    <div class="menu__right">
+        <div class="menu__right__disney">
+            <a>
+                <img class="img__disney" src="{{ 'img/castle_without_stars.svg' }}">
+            </a>
+        </div>
+        <div class="menu__right__profil">
+            <a href="{{ path('app_profil') }}">
+                <img class="img__profil" src="{{ 'img/mickey.svg' }}">
+            </a>
+        </div>
     </div>
 </div>
 

@@ -1,34 +1,47 @@
 
 
 .menu{
-    background-color: $darkBlue;
     position : fixed;
     display: flex;
-    justify-content: space-around;
     bottom: 0;
     width: 100%;
-    .box{
-        width: 35px;
-    }
-    .img__home{
-        width: 30px;
-        height: 30px;
+    align-items: flex-end;
+    z-index: 3;
+    &__left{
+        width: 42.5%;
+        background-color: $darkBlue;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
     .img__message{
-        width: 35px;
-        height: 42px;
-    }
-    .img__add{
-        width: 30px;
         height: 30px;
+        width: 42px;
     }
-
+    &__center{
+        width: 15%;
+        background-color: $darkBlue;
+        border-top-left-radius: 35%;
+        border-top-right-radius: 35%;
+        &__rounded{
+            height: 70px;
+        }
+    }
+    &__right{
+        width: 42.5%;
+        background-color: $darkBlue;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
     .img__disney{
-        width: 94px;
-        height: 42px;
+        height: 50px;
+        width: 70px;
     }
     .img__profil{
+        height: 40px;
         width: 45px;
-        height: 45px;
     }
 }
